@@ -1,0 +1,33 @@
+{
+  "name": "gulp-jsont",
+  "version": "1.0.0",
+  "description": "JSON transformation plugin for gulp",
+  "main": "index.js",
+  "keywords": [
+    "gulpplugin",
+    "json",
+    "jsont"
+  ],
+  "author": {
+    "name": "Alexander Chermenin",
+    "email": "alex@chermenin.ru"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/chermenin/gulp-jsont.git"
+  },
+  "dependencies": {
+    "gulp-util": "~3.1.0",
+    "event-stream": "~3.1.7"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/chermenin/gulp-jsont/raw/master/LICENSE"
+    }
+  ],
+  "engineStrict": true,
+  "engines": {
+    "node": ">= 0.10"
+  }
+}

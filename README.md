@@ -4,7 +4,20 @@
   [![NPM Downloads][downloads-image]][downloads-url]
   [![NPM License][license-image]][license-url]
   
-JSON transformation plugin for Gulp
+JSON transformation plugin for Gulp based on [JSONT](http://goessner.net/articles/jsont/) by Stefan Goessner.
+
+## Usage
+
+```js
+var jsont = require('gulp-jsont');
+
+gulp.task('jsont', function() {
+    gulp.src('*.json')
+        .pipe(jsont('template.json'))
+        .pipe(gulp.dest('./build/'));
+});
+```
+
 
 [npm-image]: https://img.shields.io/npm/v/gulp-jsont.svg
 [npm-url]: https://npmjs.org/package/gulp-jsont

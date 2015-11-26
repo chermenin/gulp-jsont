@@ -8,13 +8,13 @@
     "json",
     "jsont"
   ],
-  "author": {
-    "name": "Alexander Chermenin",
-    "email": "alex@chermenin.ru"
-  },
+  "author": "Alexander Chermenin <alex@chermenin.ru>",
   "repository": {
     "type": "git",
     "url": "git://github.com/chermenin/gulp-jsont.git"
+  },
+  "bugs": {
+    "url": "https://github.com/chermenin/gulp-jsont/issues"
   },
   "dependencies": {
     "gulp-util": "~3.1.0",

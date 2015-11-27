@@ -26,6 +26,7 @@
       "url": "http://github.com/chermenin/gulp-jsont/raw/master/LICENSE"
     }
   ],
+  "license": "MIT",
   "engineStrict": true,
   "engines": {
     "node": ">= 0.10"

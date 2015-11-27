@@ -17,7 +17,7 @@
     "url": "https://github.com/chermenin/gulp-jsont/issues"
   },
   "dependencies": {
-    "gulp-util": "~3.1.0",
+    "gulp-util": "~3.0.0",
     "event-stream": "~3.1.7"
   },
   "licenses": [

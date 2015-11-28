@@ -10,7 +10,7 @@ module.exports = function(template) {
 
   var json;
   try {
-    json = _eval("module.exports = function () { return " + fs.readFileSync(template, 'utf8') + "; };");
+    json = _eval("module.exports = function (fs, require) { return " + fs.readFileSync(template, 'utf8') + "; };");
   } catch (e) {
     throw new Error(e.message);
   }
@@ -91,7 +91,7 @@ module.exports = function(template) {
     if (file.isBuffer()) {
       try {
         var document = JSON.parse(String(file.contents));
-        file.contents = new Buffer(jsonT(document, json()));
+        file.contents = new Buffer(jsonT(document, json(fs, require)));
       } catch (e) {
         return throwError(e.message);
       }

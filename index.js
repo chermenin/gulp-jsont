@@ -3,13 +3,14 @@
 var gutil = require('gulp-util');
 var fs = require('fs');
 var es = require('event-stream');
+var _eval = require('eval');
 
 module.exports = function(template) {
   if (!template) throw new Error('Template option missing');
 
   var json;
   try {
-    json = JSON.parse(fs.readFileSync(template, 'utf8'));
+    json = _eval("module.exports = function () { return " + fs.readFileSync(template, 'utf8') + "; };");
   } catch (e) {
     throw new Error(e.message);
   }
@@ -90,7 +91,7 @@ module.exports = function(template) {
     if (file.isBuffer()) {
       try {
         var document = JSON.parse(String(file.contents));
-        file.contents = new Buffer(jsonT(document, json));
+        file.contents = new Buffer(jsonT(document, json()));
       } catch (e) {
         return throwError(e.message);
       }

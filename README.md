@@ -12,11 +12,38 @@ JSON transformation plugin for Gulp based on [JSONT](http://goessner.net/article
 var jsont = require('gulp-jsont');
 
 gulp.task('jsont', function() {
-    gulp.src('*.json')
+    gulp.src('example.json')
         .pipe(jsont('template.json'))
         .pipe(gulp.dest('./build/'));
 });
 ```
+
+#### example.json
+
+```json
+{
+  "link": {
+    "uri": "http://company.com",
+    "title":"company homepage"
+  }
+}
+```
+
+#### template.json
+
+```json
+{
+  "link": "<a href=\"{link.uri}\">{link.title}</a>"
+}
+```
+
+#### Results
+
+```<a href="http://company.com">company homepage</a>```
+
+#### More information
+
+Here is the documentation got JSONT library: http://goessner.net/articles/jsont/
 
 
 [npm-image]: https://img.shields.io/npm/v/gulp-jsont.svg

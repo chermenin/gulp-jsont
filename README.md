@@ -39,7 +39,9 @@ gulp.task('jsont', function() {
 
 #### Results
 
-```<a href="http://company.com">company homepage</a>```
+```html
+<a href="http://company.com">company homepage</a>
+```
 
 #### More information
 

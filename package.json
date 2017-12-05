@@ -1,6 +1,6 @@
 {
   "name": "gulp-jsont",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "JSON transformation plugin for gulp",
   "main": "index.js",
   "keywords": [
